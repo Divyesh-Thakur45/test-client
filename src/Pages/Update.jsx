@@ -26,7 +26,7 @@ const Update = () => {
 
 
     const getUser = () => {
-        axios.get(`http://localhost:8080/product/GetOneProducts/${userId}`, {
+        axios.get(`https://crud-g2k4.onrender.com/product/GetOneProducts/${userId}`, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }
@@ -68,7 +68,7 @@ const Update = () => {
             return navigate(`/Update/${userId}`);
         }
 
-        axios.patch(`http://localhost:8080/product/UpdateProducts/${userId}`, {
+        axios.patch(`https://crud-g2k4.onrender.com/product/UpdateProducts/${userId}`, {
             file: image,
             email,
             password,
