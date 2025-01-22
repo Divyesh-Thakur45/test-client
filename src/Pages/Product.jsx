@@ -8,14 +8,14 @@ const Product = () => {
     const [data, setData] = useState([])
     const [swalProps, setSwalProps] = useState({});
     const getData = () => {
-        axios.get("http://localhost:8080/product/GetAllProducts/1", {
+        axios.get("https://crud-g2k4.onrender.com/product/GetAllProducts/1", {
             withCredentials: true,
         }).then((res) => setData(res.data.message))
             .catch((err) => console.log(err))
     }
     const deleteData = (id) => {
         console.log(id)
-        axios.delete(`http://localhost:8080/product/DeleteProducts/${id}`)
+        axios.delete(`https://crud-g2k4.onrender.com/product/DeleteProducts/${id}`)
             .then((res) => (
                 console.log("Product deleted successfully !"),
                 getData()
