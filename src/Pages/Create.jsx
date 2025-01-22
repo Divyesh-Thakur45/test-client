@@ -96,7 +96,7 @@ const Create = () => {
             return navigate("/Create");
         }
 
-        axios.post(`http://localhost:8080/product/CreateProducts`, {
+        axios.post(`https://crud-g2k4.onrender.com/product/CreateProducts`, {
             file: image,
             email,
             password,
